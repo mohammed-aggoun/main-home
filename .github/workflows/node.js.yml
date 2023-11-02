@@ -39,7 +39,7 @@ jobs:
         dir
 
     - name: Deploy to Hostinger
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      uses: main-home/FTP-Deploy-Action@4.0.0
       with:
           server: mohammedaggoun.com  # Remove the "ftp://" prefix
           username: ${{ secrets.FTP_USER }}  # Your GitHub secret for FTP username
