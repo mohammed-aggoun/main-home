@@ -42,5 +42,5 @@ jobs:
           username: ${{ secrets.FTP_USER }}  # Your GitHub secret for FTP username
           password: ${{ secrets.FTP_PASSWORD }}  # Your GitHub secret for FTP password
           local-dir: ./dist/  # The directory with your built Angular project
-          server-dir: /public_html/v2/  # The target directory on your Hostinger server
+          server-dir: /public_html/v1/  # The target directory on your Hostinger server
     
