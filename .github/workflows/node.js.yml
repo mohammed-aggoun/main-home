@@ -44,7 +44,7 @@ jobs:
           server: mohammedaggoun.com  # Remove the "ftp://" prefix
           username: ${{ secrets.FTP_USER }}  # Your GitHub secret for FTP username
           password: ${{ secrets.FTP_PASSWORD }}  # Your GitHub secret for FTP password
-          local-dir: ./dist/  # The directory with your built Angular project
+          local-dir: ./dist/mohammed-aggoun/  # The directory with your built Angular project
           server-dir: /public_html/v1/  # The target directory on your Hostinger server
     
 
