@@ -1,4 +1,7 @@
-ame: NodeJS with Webpack
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: NodeJS with Webpack
 
 on:
   push:
@@ -44,3 +47,4 @@ jobs:
           local-dir: ./dist/  # The directory with your built Angular project
           server-dir: /public_html/v1/  # The target directory on your Hostinger server
     
+
