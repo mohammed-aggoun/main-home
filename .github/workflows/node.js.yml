@@ -35,7 +35,7 @@ jobs:
 
     - name: Build
       run: |
-        ng build --prod
+        ng build --configuration production
         dir
 
     - name: Deploy to Hostinger
