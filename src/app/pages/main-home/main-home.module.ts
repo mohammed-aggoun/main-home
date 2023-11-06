@@ -19,6 +19,8 @@ import { UiModule } from 'src/app/shared/ui/ui.module';
 import { HeroComponent } from './hero/hero.component';
 import { LandingPagesComponent } from './landing-pages/landing-pages.component';
 import { FooterComponent } from './footer/footer.component';
+import { CtaComponent } from '../main-home/cta/cta.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
     HeroComponent,
     LandingPagesComponent,
     FooterComponent,
+    CtaComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +37,7 @@ import { FooterComponent } from './footer/footer.component';
     SwiperModule,
     NavbarsModule,
     UiModule,
+    ReactiveFormsModule,
   ]
 })
 export class MainHomeModule { }
