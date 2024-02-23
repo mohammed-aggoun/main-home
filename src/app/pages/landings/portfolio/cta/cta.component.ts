@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-portfolio-cta',
@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CtaComponent implements OnInit {
 
-  ctaForm: FormGroup = this.fb.group({
+  ctaForm: UntypedFormGroup = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     name: ['', Validators.required],
     subject: [''],
@@ -16,7 +16,7 @@ export class CtaComponent implements OnInit {
   });
   formSubmitted: boolean = false;
 
-  constructor (private fb: FormBuilder) { }
+  constructor (private fb: UntypedFormBuilder) { }
 
   ngOnInit(): void {
   }

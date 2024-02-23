@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { latLng, tileLayer } from 'leaflet';
 
 @Component({
@@ -9,7 +9,7 @@ import { latLng, tileLayer } from 'leaflet';
 })
 export class ContactUsComponent implements OnInit {
 
-  ctaForm: FormGroup = this.fb.group({
+  ctaForm: UntypedFormGroup = this.fb.group({
     fname: ['', Validators.required],
     lname: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
@@ -21,7 +21,7 @@ export class ContactUsComponent implements OnInit {
   options: any = {};
 
 
-  constructor (private fb: FormBuilder) { }
+  constructor (private fb: UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.options = {

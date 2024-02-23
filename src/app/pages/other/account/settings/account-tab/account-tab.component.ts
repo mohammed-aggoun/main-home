@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-settings-account-tab',
@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AccountTabComponent implements OnInit {
 
-  accountForm: FormGroup = this.fb.group({
+  accountForm: UntypedFormGroup = this.fb.group({
     name: ['Greeva Navadiya', Validators.required],
     displayName: ['Greeva N'],
     email: ['greeva@coderthemes.com', [Validators.required, Validators.email]],
@@ -19,7 +19,7 @@ export class AccountTabComponent implements OnInit {
 
   formSubmitted: boolean = false;
 
-  constructor (private fb: FormBuilder) { }
+  constructor (private fb: UntypedFormBuilder) { }
 
   ngOnInit(): void {
   }

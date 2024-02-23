@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { UntypedFormGroup, Validators, UntypedFormBuilder } from '@angular/forms';
 
 // validaator
 import { Validation } from './confirm-password.validator';
@@ -11,7 +11,7 @@ import { Validation } from './confirm-password.validator';
 })
 export class PasswordTabComponent implements OnInit {
 
-  passwordForm: FormGroup = this.fb.group({
+  passwordForm: UntypedFormGroup = this.fb.group({
     currentPassword: ['', Validators.required],
     newPassword: ['', [Validators.required, Validators.minLength(4)]],
     confirmPassword: ['', [Validators.required]]
@@ -23,7 +23,7 @@ export class PasswordTabComponent implements OnInit {
 
   formSubmitted: boolean = false;
 
-  constructor (private fb: FormBuilder) { }
+  constructor (private fb: UntypedFormBuilder) { }
 
   ngOnInit(): void {
   }

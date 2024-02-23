@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
 
@@ -17,7 +17,7 @@ import { User } from 'src/app/core/models/auth.models';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup = this.fb.group({
+  loginForm: UntypedFormGroup = this.fb.group({
     email: ['prompt@coderthemes.com', [Validators.required, Validators.email]],
     password: ['test', Validators.required]
   });
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private authenticationService: AuthenticationService,
     private titleService: Title,
-    private fb: FormBuilder
+    private fb: UntypedFormBuilder
   ) { }
 
   ngOnInit(): void {

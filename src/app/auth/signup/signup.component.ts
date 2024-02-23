@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { first } from 'rxjs';
@@ -15,7 +15,7 @@ import { AuthenticationService } from 'src/app/core/service/auth.service';
 })
 export class SignupComponent implements OnInit {
 
-  signUpForm: FormGroup = this.fb.group({
+  signUpForm: UntypedFormGroup = this.fb.group({
     name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required]]
@@ -26,7 +26,7 @@ export class SignupComponent implements OnInit {
   error: string = '';
 
   constructor (
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private router: Router,
     private authenticationService: AuthenticationService,
     private titleService: Title
