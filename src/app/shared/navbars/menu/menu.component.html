@@ -1,23 +1,23 @@
 <ul class="navbar-nav align-items-lg-center" [class]="navClass" id="top-menu">
     <li class="nav-item">
-        <a class="nav-link top-nav-link-ref" [routerLink]="''" routerLinkActive="active">Home</a>
+        <a class="nav-link top-nav-link-ref" [routerLink]="''" >Home</a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link top-nav-link-ref" [routerLink]="''" routerLinkActive="active">Embedded</a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
         <a class="nav-link top-nav-link-ref" [routerLink]="''" routerLinkActive="active">Front End</a>
+    </li> -->
+    <li class="nav-item">
+        <a class="nav-link top-nav-link-ref" [routerLink]="'/blog'" routerLinkActive="active-link">My Blog</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link top-nav-link-ref" [routerLink]="'/blog'" routerLinkActive="active">My Blog</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link top-nav-link-ref" [routerLink]="'uiux'" routerLinkActive="active">UI/UX</a>
+        <a class="nav-link top-nav-link-ref" [routerLink]="'/ui-dev'" routerLinkActive="active-link">UI-DEV</a>
     </li>
 
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link top-nav-link-ref" [routerLink]="'/digital-art'" routerLinkActive="active">Digital Art</a>
-    </li>
+    </li> -->
 
     <li class="nav-item dropdown" ngbDropdown #landingDrop="ngbDropdown">
         <!--  <a class="nav-link top-nav-link-ref dropdown-toggle" href="javascript:void(0)" (click)="landingDrop.toggle()"

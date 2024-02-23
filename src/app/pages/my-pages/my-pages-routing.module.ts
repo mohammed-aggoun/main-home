@@ -17,6 +17,16 @@ const routes: Routes = [
     ]
   },
 
+
+  {
+    path: 'ui-dev',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ui-dev/ui-dev.module').then(m => m.UiDevModule)      },
+    ]
+  },
+
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

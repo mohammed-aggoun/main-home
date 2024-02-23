@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "mohammed-aggoun"
+  "defaultProject": "mohammed-aggoun",
+  "cli": {
+    "analytics": false
+  }
 }
